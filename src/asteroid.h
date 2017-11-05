@@ -5,9 +5,6 @@
  */
 #ifndef asteroid_h
 #define asteroid_h
-
-#include <math.h>
-
 /**
  * @brief Calculate asteroid diameter
  * @param abs_mag Absolute magnitude of the asteroid

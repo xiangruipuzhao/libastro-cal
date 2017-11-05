@@ -5,6 +5,7 @@
 /* asteroid  */
 MU_TEST(test_check)
 {
+    mu_check(ac_asteroid_diameter(30.32, 223.2) <= 0.351551);
     mu_check(ac_asteroid_apparent_diameter(20, 30) == 0.919200);
 }
 
@@ -17,6 +18,6 @@ int main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
-    
+
     return 0;
 }
