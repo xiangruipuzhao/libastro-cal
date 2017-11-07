@@ -1,4 +1,4 @@
-# astro-cal
+# libastro-cal
 
 ## Getting Started
 
