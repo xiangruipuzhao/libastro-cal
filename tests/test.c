@@ -12,7 +12,7 @@ MU_TEST(test_check)
 
     /* angle */
     mu_check(ac_angle_anglr_sepr(20.2, 32.1, 13.2, 22.2) >= 0.666738);
-    mu_check(ac_angle_deg_frm_dms(40, 20, 23.2) == 0);
+    mu_check(ac_angle_deg_frm_dms(203, 14, 12.3) <= 203.236750);
 }
 
 MU_TEST_SUITE(test_suite)
@@ -24,6 +24,9 @@ int main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
+
+    // check function return value
+    printf("%f\n", ac_angle_deg_frm_dms(203, 14, 12.3));
 
     return 0;
 }

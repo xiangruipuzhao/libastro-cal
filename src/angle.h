@@ -6,6 +6,8 @@
 #ifndef angle_h
 #define angle_h
 
+#include <stdint.h>
+
 /**
  * @brief Calculate the angular separation between two points
  *
