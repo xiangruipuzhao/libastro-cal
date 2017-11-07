@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 /**
- * @brief Calculate the angular separation between two points
+ * @brief Calculate the angular separation between two points.
  *
  * @param p1a1 Angle 1 of point 1 in radians.
  * @param p1a2 Angle 2 of point 1 in radians.
@@ -34,4 +34,19 @@ double ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2);
  * @return Angle in degrees with decimals.
  */
 double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec);
+
+/**
+ * @brief Computes an angle expressed in degrees, arcminutes and
+ * arcseconds, from an angle in degrees with decimals.
+ * 
+ * @param deg Angle in degrees with decimals.
+ *
+ * @return (*deg, *min, *sec)
+ *
+ * *deg : Degrees
+ * *min : Arcminutes
+ * *sec : Arcseconds
+ */
+double ac_angle_dms_from_deg(double deg);
+
 #endif

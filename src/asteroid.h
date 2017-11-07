@@ -5,6 +5,7 @@
  */
 #ifndef asteroid_h
 #define asteroid_h
+
 /**
  * @brief Calculate asteroid diameter
  * @param abs_mag Absolute magnitude of the asteroid
