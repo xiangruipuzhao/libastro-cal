@@ -12,6 +12,7 @@ MU_TEST(test_check)
 
     /* angle */
     mu_check(ac_angle_anglr_sepr(20.2, 32.1, 13.2, 22.2) >= 0.666738);
+    mu_check(ac_angle_deg_frm_dms(40, 20, 23.2) == 0);
 }
 
 MU_TEST_SUITE(test_suite)
