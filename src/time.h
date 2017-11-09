@@ -17,30 +17,41 @@
 */
 
 /**
- * @file asteroid.h
+ * @file time.h
  * @author faraco
- * @brief Header file for asteroid diameter operations.
+ * @brief Header file for time operations.
  */
 
-#ifndef asteroid_h
-#define asteroid_h
+#ifndef time_h
+#define time_h
 
-/**
- * @brief Calculate asteroid diameter.
- * @param abs_mag Absolute magnitude of the asteroid.
- * @param albedo Reflective power of the asteroid.
- *
- * @return diameter of the asteroid in meters.
- */
-double ac_asteroid_diameter(double abs_mag, double albedo);
+#include <stdint.h>
+#include "angle.h"
 
-/**
- * @brief Calculate the apparent diameter of an asteroid.
- * @param true_diameter true diameter of an asteroid in kilometers (km).
- * @param asteroid_earth_dist Asteroid to Earth distance in Astronomical Unit (AU).
- *
- * @return apparent diameter of the asteroid in meters.W
- */
-double ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist);
+enum CalType {
+    Gregorian,
+    Julian
+};
+
+enum Month {
+    Jan = 1,
+    Feb 2,
+    March = 3,
+    April = 4,
+    May = 5,
+    June = 6,
+    July 7,
+    August = 8,
+    September = 9,
+    October = 10,
+    November = 11,
+    December = 12
+};
+
+// \todo Learn how to use enum inside a struct
+typedef struct _Date {
+    int16_t year;
+
+} Date;
 
 #endif
