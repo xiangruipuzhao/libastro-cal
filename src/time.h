@@ -35,12 +35,12 @@ enum CalType {
 
 enum Month {
     Jan = 1,
-    Feb 2,
+    Feb = 2,
     March = 3,
     April = 4,
     May = 5,
     June = 6,
-    July 7,
+    July = 7,
     August = 8,
     September = 9,
     October = 10,
@@ -48,10 +48,53 @@ enum Month {
     December = 12
 };
 
-// \todo Learn how to use enum inside a struct
-typedef struct _Date {
+struct Date {
     int16_t year;
+    double decimal_day;
+    enum Month month;
+    enum CalType cal_type;
+};
 
-} Date;
+struct DayOfMonth {
+    uint8_t day;
+    uint8_t hr;
+    uint8_t min;
+
+    double sec;
+    double time_zone;
+};
+
+enum Weekday {
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+/**
+ * @briefComputes Julian day from a `Date`
+ *
+ * @param date A Date struct.
+ *
+ */
+double ac_time_julian_day(struct Date *date);
+
+/**
+ * \todo Document function.
+ * @param date A Date struct.
+ */
+enum Weekday ac_time_weekday_frm_date(struct Date *date);
+
+
+/**
+ * @brief Computes decimal day for a DayOfMonth.
+ *
+ * @param day A DayOfMonth struct.
+ *
+ */
+double ac_time_decimal_day(struct DayOfMonth *day);
 
 #endif

@@ -21,6 +21,7 @@
 
 #include "../src/asteroid.h"
 #include "../src/angle.h"
+#include "../src/time.h"
 
 MU_TEST(test_check)
 {
@@ -32,7 +33,8 @@ MU_TEST(test_check)
     mu_check(ac_angle_anglr_sepr(20.2, 32.1, 13.2, 22.2) >= 0.666738);
     mu_check(ac_angle_deg_frm_dms(203, 14, 12.3) <= 203.236750);
 
-    Arc_t result;
+    /* check if the calculations are accurate with other systems below */
+    struct Arc result;
 
     result = ac_angle_dms_from_deg(20.2);
     mu_check(result.degree == 20);
@@ -41,7 +43,7 @@ MU_TEST(test_check)
 
     mu_check(ac_angle_deg_frm_hms(12, 20, 32.0) >= 185.13);
 
-    Arc_t result2;
+    struct Arc result2;
 
     result2 = ac_angle_hms_from_deg(3021.2);
     mu_check(result2.hour == 201);
@@ -50,6 +52,30 @@ MU_TEST(test_check)
 
     mu_check(ac_angle_limit_to_360(-2.231) <= 357.769000);
     mu_check(ac_angle_limit_to_two_PI(-2.123) >= 4.160185);
+
+    /* time */
+
+    struct Date date1;
+    enum CalType w = Julian;
+    enum Month m = Feb;
+
+    date1.year = 8;
+    date1.decimal_day = 23.0;
+    date1.month = m;
+    date1.cal_type = w;
+
+    mu_check(ac_time_julian_day(&date1) >= 1724032.5);
+
+    struct DayOfMonth dom1;
+
+    dom1.day = 7;
+    dom1.hr = 3;
+    dom1.min = 2;
+    dom1.sec = 22.1;
+    dom1.time_zone = 11.2;
+
+    mu_check(ac_time_decimal_day(&dom1) == 2);
+
 }
 
 MU_TEST_SUITE(test_suite)
@@ -61,6 +87,27 @@ int main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
+
+
+    struct DayOfMonth dom1;
+
+    dom1.day = 7;
+    dom1.hr = 3;
+    dom1.min = 2;
+    dom1.sec = 22.1;
+    dom1.time_zone = 11.2;
+    printf("%f\n", ac_time_decimal_day(&dom1));
+
+    struct Date date1;
+    enum CalType w = Julian;
+    enum Month m = Feb;
+
+    date1.year = 8;
+    date1.decimal_day = 23.0;
+    date1.month = m;
+    date1.cal_type = w;
+
+    printf("%f\n", ac_time_julian_day(&date1));
     
     return 0;
 }

@@ -55,9 +55,9 @@ double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec)
     return (double)deg + (double)M / 60.0 + S/3600.0;
 }
 
-Arc_t ac_angle_dms_from_deg(double deg)
+struct Arc ac_angle_dms_from_deg(double deg)
 {
-    Arc_t data;
+    struct Arc data;
 
     data.degree = (double)deg;
     double minutes = (deg - ((double)data.degree)) * 60.0;
@@ -73,9 +73,9 @@ double ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec)
     return 15.0 * (((double)hour) + ((double)min)/60.0 + sec/3600.0);
 }
 
-Arc_t ac_angle_hms_from_deg(double deg)
+struct Arc ac_angle_hms_from_deg(double deg)
 {
-    Arc_t data;
+    struct Arc data;
 
     double hours = deg / 15.0;
     data.hour = hours;

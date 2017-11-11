@@ -31,12 +31,12 @@
  * \typedef
  * 
  */
-typedef struct _Arc {
+struct Arc {
     int64_t hour;
     int64_t degree;
     int64_t minute;
     double seconds;
-} Arc_t;
+};
 
 /**
  * @brief M_PI*2.0
@@ -82,7 +82,7 @@ double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec);
  * minute : Arcminutes
  * seconds : Arcseconds
  */
-Arc_t ac_angle_dms_from_deg(double deg);
+struct Arc ac_angle_dms_from_deg(double deg);
 
 /**
  * @brief Computes an angle in degrees with decimals, from an angle
@@ -108,7 +108,7 @@ double ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec);
  * min : Minutes
  * sec : Seconds
  */
-Arc_t ac_angle_hms_from_deg(double deg);
+struct Arc ac_angle_hms_from_deg(double deg);
 
 /**
  * @brief Computes the equivalent angle in [0, 360] degree range.
