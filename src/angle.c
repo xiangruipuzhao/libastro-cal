@@ -29,15 +29,17 @@
 
 const double TWO_PI = 2.0 * M_PI;
 
-double ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2)
+double
+ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2)
 {
     return acos(
                sin(p1a2) * sin(p2a2) + cos(p1a2) * cos(p2a2) * cos(p1a1 - p2a1)
            );
 }
 
-double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec)
-{   
+double
+ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec)
+{
 
     int64_t M;
     double S;
@@ -55,7 +57,8 @@ double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec)
     return (double)deg + (double)M / 60.0 + S/3600.0;
 }
 
-struct Arc ac_angle_dms_from_deg(double deg)
+struct Arc
+ac_angle_dms_from_deg(double deg)
 {
     struct Arc data;
 
@@ -68,12 +71,14 @@ struct Arc ac_angle_dms_from_deg(double deg)
     return data;
 }
 
-double ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec)
+double
+ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec)
 {
     return 15.0 * (((double)hour) + ((double)min)/60.0 + sec/3600.0);
 }
 
-struct Arc ac_angle_hms_from_deg(double deg)
+struct Arc
+ac_angle_hms_from_deg(double deg)
 {
     struct Arc data;
 
@@ -88,7 +93,8 @@ struct Arc ac_angle_hms_from_deg(double deg)
     return data;
 }
 
-double ac_angle_limit_to_360(double angl)
+double
+ac_angle_limit_to_360(double angl)
 {
     int64_t n = (angl / 360.0);
     double limited_angl = angl - (360.0 * ((double)n));
@@ -102,7 +108,8 @@ double ac_angle_limit_to_360(double angl)
     }
 }
 
-double ac_angle_limit_to_two_PI(double angl)
+double
+ac_angle_limit_to_two_PI(double angl)
 {
     int64_t n = (angl / TWO_PI);
     double limited_angl = angl - (TWO_PI * ((double)n));

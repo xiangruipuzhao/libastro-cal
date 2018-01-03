@@ -29,7 +29,7 @@
 
 /**
  * \typedef
- * 
+ *
  */
 struct Arc {
     int64_t hour;
@@ -53,10 +53,11 @@ extern const double TWO_PI;
  *
  * Angle 1 may be right ascension or longitude.<br>
  * Angle 2 may be declination or latitude.
- * 
+ *
  * \todo Document return value.
  */
-double ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2);
+double
+ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2);
 
 /**
  * @brief Computes an angle in degrees with decimals,
@@ -68,12 +69,13 @@ double ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2);
  *
  * @return Angle in degrees with decimals.
  */
-double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec);
+double
+ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec);
 
 /**
  * @brief Computes an angle expressed in degrees, arcminutes and
  * arcseconds, from an angle in degrees with decimals.
- * 
+ *
  * @param deg Angle in degrees with decimals.
  *
  * @return Arc_t struct (degree, minute, seconds)
@@ -82,7 +84,8 @@ double ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec);
  * minute : Arcminutes
  * seconds : Arcseconds
  */
-struct Arc ac_angle_dms_from_deg(double deg);
+struct Arc
+ac_angle_dms_from_deg(double deg);
 
 /**
  * @brief Computes an angle in degrees with decimals, from an angle
@@ -94,31 +97,34 @@ struct Arc ac_angle_dms_from_deg(double deg);
  *
  * \todo Document return value.
  */
-double ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec);
+double
+ac_angle_deg_frm_hms(int64_t hour, int64_t min, double sec);
 
 /**
  * @brief Computes an angle expressed in hours, minutes and
  * seconds, from an angle in degrees with decimals.
- * 
+ *
  * @param deg Angle in degrees with decimals.
- * 
+ *
  * @return Arc_t struct (hour, minute, seconds)
  *
  * hour : Hours
  * min : Minutes
  * sec : Seconds
  */
-struct Arc ac_angle_hms_from_deg(double deg);
+struct Arc
+ac_angle_hms_from_deg(double deg);
 
 /**
  * @brief Computes the equivalent angle in [0, 360] degree range.
  *
  * @param angl Angle in degrees.
- * 
+ *
  * \todo Document return value.
- * 
+ *
  */
-double ac_angle_limit_to_360(double angl);
+double
+ac_angle_limit_to_360(double angl);
 
 /**
  * @brief Computes the equivalent angle in [0, 2π] radian range.
@@ -127,6 +133,7 @@ double ac_angle_limit_to_360(double angl);
  *
  * \todo Document return value.
  */
-double ac_angle_limit_to_two_PI(double angl);
+double
+ac_angle_limit_to_two_PI(double angl);
 
 #endif

@@ -32,7 +32,8 @@
  *
  * @return diameter of the asteroid in meters.
  */
-double ac_asteroid_diameter(double abs_mag, double albedo);
+double
+ac_asteroid_diameter(double abs_mag, double albedo);
 
 /**
  * @brief Calculate the apparent diameter of an asteroid.
@@ -41,6 +42,7 @@ double ac_asteroid_diameter(double abs_mag, double albedo);
  *
  * @return apparent diameter of the asteroid in meters.W
  */
-double ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist);
+double
+ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist);
 
 #endif

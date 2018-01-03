@@ -24,7 +24,8 @@
  \todo fill in docs
  */
 
-double ac_time_julian_day(struct Date *date)
+double
+ac_time_julian_day(struct Date *date)
 {
     uint8_t month = date->month;
     double y;
@@ -64,12 +65,14 @@ double ac_time_julian_day(struct Date *date)
 /**
  * \todo Fill in logic.
  */
-enum Weekday ac_time_weekday_frm_date(struct Date *date)
+enum Weekday
+ac_time_weekday_frm_date(struct Date *date)
 {
     return 2;
 }
 
-double ac_time_decimal_day(struct DayOfMonth *day)
+double
+ac_time_decimal_day(struct DayOfMonth *day)
 {
     return  (double)day->day
           + (double)day->hr / 24.0

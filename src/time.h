@@ -80,13 +80,15 @@ enum Weekday {
  * @param date A Date struct.
  *
  */
-double ac_time_julian_day(struct Date *date);
+double
+ac_time_julian_day(struct Date *date);
 
 /**
  * \todo Document function.
  * @param date A Date struct.
  */
-enum Weekday ac_time_weekday_frm_date(struct Date *date);
+enum Weekday
+ac_time_weekday_frm_date(struct Date *date);
 
 
 /**
@@ -95,6 +97,7 @@ enum Weekday ac_time_weekday_frm_date(struct Date *date);
  * @param day A DayOfMonth struct.
  *
  */
-double ac_time_decimal_day(struct DayOfMonth *day);
+double
+ac_time_decimal_day(struct DayOfMonth *day);
 
 #endif
