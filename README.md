@@ -1,10 +1,14 @@
 # libastro-cal
 
+A simple astronomical algorithm library based on astro-rust project in C.
+
 ## Getting Started
 
 ### Prerequisites
-        
-### Installing
+
+* gcc
+* make
+* autotools
 
 ## Running the tests
 
