@@ -1,6 +1,6 @@
 /*
     libastro-cal - Astronomical algorithm library.
-    Copyright (C) 2017 faraco
+    Copyright (C) 2017-2018 faraco
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -74,7 +74,7 @@ MU_TEST(test_check)
     dom1.sec = 22.1;
     dom1.time_zone = 11.2;
 
-    mu_check(ac_time_decimal_day(&dom1) == 2);
+    mu_check(ac_time_decimal_day(&dom1) >= 7.000);
 
 }
 
@@ -106,8 +106,6 @@ int main(int argc, char **argv)
     date1.decimal_day = 23.0;
     date1.month = m;
     date1.cal_type = w;
-
-    printf("%f\n", ac_time_julian_day(&date1));
     
     return 0;
 }

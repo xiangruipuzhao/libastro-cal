@@ -1,3 +1,5 @@
 libastro-cal.so
 *.o
 CMakeLists.txt
+main
+main.c

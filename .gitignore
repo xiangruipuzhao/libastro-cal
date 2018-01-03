@@ -1,7 +1,6 @@
 # http://www.gnu.org/software/automake
 *.a
 configure
-docs/
 Makefile
 Makefile.in
 config.*
