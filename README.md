@@ -2,6 +2,10 @@
 
 A simple astronomical algorithm library based on astro-rust project in C.
 
+# Online documentation
+
+https://faraco.github.io/libastro-cal/html/index.html
+
 ## Getting Started
 
 ### Prerequisites
