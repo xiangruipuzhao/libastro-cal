@@ -33,7 +33,6 @@ MU_TEST(test_check)
     mu_check(ac_angle_anglr_sepr(20.2, 32.1, 13.2, 22.2) >= 0.666738);
     mu_check(ac_angle_deg_frm_dms(203, 14, 12.3) <= 203.236750);
 
-    /* check if the calculations are accurate with other systems below */
     struct Arc result;
 
     result = ac_angle_dms_from_deg(20.2);
@@ -87,7 +86,6 @@ int main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
-
 
     struct DayOfMonth dom1;
 
