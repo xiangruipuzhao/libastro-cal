@@ -53,7 +53,6 @@ MU_TEST(test_check)
     mu_check(ac_angle_limit_to_two_PI(-2.123) >= 4.160185);
 
     /* time */
-
     struct Date date1;
     enum CalType w = Julian;
     enum Month m = Feb;
@@ -74,7 +73,6 @@ MU_TEST(test_check)
     dom1.time_zone = 11.2;
 
     mu_check(ac_time_decimal_day(&dom1) >= 7.000);
-
 }
 
 MU_TEST_SUITE(test_suite)
@@ -94,7 +92,6 @@ int main(int argc, char **argv)
     dom1.min = 2;
     dom1.sec = 22.1;
     dom1.time_zone = 11.2;
-    printf("%f\n", ac_time_decimal_day(&dom1));
 
     struct Date date1;
     enum CalType w = Julian;
@@ -107,3 +104,4 @@ int main(int argc, char **argv)
     
     return 0;
 }
+

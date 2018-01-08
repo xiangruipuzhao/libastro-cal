@@ -8,7 +8,9 @@ if [[ ! -f /usr/lib/libastro-cal.a ]];then
 fi
 
 if [[ -z $COMMAND ]];then
-        gcc apparent_asteroid_diameter.c -o apparent_asteroid_diameter -lastro-cal -lm
+        gcc apparent_asteroid_diameter.c -o apparent_asteroid_diameter -lastro-cal -lm -O2
+        gcc asteroid_diameter.c -o asteroid_diameter -lastro-cal -lm -O2
 elif [[ $COMMAND = 'clean' ]];then
         rm apparent_asteroid_diameter
+        rm asteroid_diameter
 fi
