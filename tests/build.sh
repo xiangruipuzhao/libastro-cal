@@ -13,7 +13,7 @@ if [[ ! -f ../src/libastro-cal.a ]];then
 fi
 
 if [[ -z $COMMAND ]];then
-        gcc test.c -o test ../src/libastro-cal.a -lm
+        gcc test.c -o test ../src/libastro-cal.a -lm -O2
 elif [[ $COMMAND = 'clean' ]];then
         rm test
 fi

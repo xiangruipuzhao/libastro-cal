@@ -31,12 +31,14 @@ ac_time_julian_day(struct Date *date)
     double y;
     double m;
 
-    if (month == 1 || month == 2) {
+    if (month == 1 || month == 2)
+    {
         y = (double)date->year - 1;
         m = (double)month + 12;
     }
 
-    else {
+    else
+    {
         y = (double)date->year;
         m = (double)month;
     }
@@ -47,11 +49,13 @@ ac_time_julian_day(struct Date *date)
     enum CalType g = Gregorian;
     enum CalType j = Julian;
 
-    if (date->cal_type == g) {
+    if (date->cal_type == g)
+    {
             b = 2.0 - a + floor(a / 4.0);
     }
 
-    else if (date->cal_type == j) {
+    else if (date->cal_type == j)
+    {
             b = 0.0;
     }
 
@@ -80,3 +84,4 @@ ac_time_decimal_day(struct DayOfMonth *day)
           + day->sec / 60.0
           - day->time_zone / 24.0;
 }
+

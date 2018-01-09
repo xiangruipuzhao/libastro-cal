@@ -33,8 +33,8 @@ double
 ac_angle_anglr_sepr(double p1a1, double p1a2, double p2a1, double p2a2)
 {
     return acos(
-               sin(p1a2) * sin(p2a2) + cos(p1a2) * cos(p2a2) * cos(p1a1 - p2a1)
-           );
+            sin(p1a2) * sin(p2a2) + cos(p1a2) * cos(p2a2) * cos(p1a1 - p2a1)
+    );
 }
 
 double
@@ -44,12 +44,14 @@ ac_angle_deg_frm_dms(int64_t deg, int64_t min, double sec)
     int64_t M;
     double S;
 
-    if (deg < 0) {
+    if (deg < 0)
+    {
         M = llabs(-min);
         S = llabs(-sec);
     }
 
-    else {
+    else
+    {
         M = min;
         S = sec;
     }
@@ -99,11 +101,13 @@ ac_angle_limit_to_360(double angl)
     int64_t n = (angl / 360.0);
     double limited_angl = angl - (360.0 * ((double)n));
 
-    if (limited_angl < 0.0) {
+    if (limited_angl < 0.0)
+    {
         return limited_angl += 360.0;
     }
 
-    else {
+    else
+    {
         return limited_angl;
     }
 }
@@ -114,11 +118,14 @@ ac_angle_limit_to_two_PI(double angl)
     int64_t n = (angl / TWO_PI);
     double limited_angl = angl - (TWO_PI * ((double)n));
 
-    if (limited_angl < 0.0) {
+    if (limited_angl < 0.0)
+    {
         return limited_angl += TWO_PI;
     }
 
-    else {
+    else
+    {
         return limited_angl;
     }
 }
+

@@ -46,3 +46,4 @@ double
 ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist);
 
 #endif
+

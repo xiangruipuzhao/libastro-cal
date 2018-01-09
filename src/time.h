@@ -101,3 +101,4 @@ double
 ac_time_decimal_day(struct DayOfMonth *day);
 
 #endif
+
