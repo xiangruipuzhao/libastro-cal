@@ -16,13 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <stdio.h>
 #include <math.h>
 #include "time.h"
-
-
-/**
- \todo fill in docs
- */
 
 double
 ac_time_julian_day(struct Date *date)
@@ -66,13 +62,43 @@ ac_time_julian_day(struct Date *date)
           - 1524.5;
 }
 
-/**
- * \todo Fill in logic.
- */
 enum Weekday
 ac_time_weekday_frm_date(struct Date *date)
 {
-    return 2;
+    struct Date date_0UT;
+    enum CalType cal_type_1 = Gregorian;
+    
+    date_0UT = (struct Date)
+    {
+        .year = date->year,
+        .decimal_day = (int64_t)floor(date->decimal_day),
+        .month = date->month,
+        .cal_type = cal_type_1
+    };
+    
+    double JD = ac_time_julian_day(&date_0UT);
+    int64_t wd = (int64_t)(JD + 1.5) % 7;
+    
+    enum Weekday wday;
+    switch(wd)
+    {
+        case 0:
+            return wday = Sunday;
+        case 1:
+            return wday = Monday;
+        case 2:
+            return wday = Tuesday;
+        case 3:
+            return wday = Wednesday;
+        case 4:
+            return wday = Thursday;
+        case 5:
+            return wday = Friday;
+        case 6:
+            return wday = Saturday;
+        default:
+            printf("ac_time_weekday_from_date error.\n");
+    }
 }
 
 double
@@ -84,4 +110,3 @@ ac_time_decimal_day(struct DayOfMonth *day)
           + day->sec / 60.0
           - day->time_zone / 24.0;
 }
-

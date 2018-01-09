@@ -18,7 +18,7 @@
 
 /**
  * @file time.h
- * @author faraco
+ * @author faraco <skelic3@gmail.com>
  * @brief Header file for time operations.
  */
 
@@ -75,7 +75,7 @@ enum Weekday {
 };
 
 /**
- * @briefComputes Julian day from a `Date`
+ * @brief Computes Julian day from a Date.
  *
  * @param date A Date struct.
  *
@@ -84,7 +84,8 @@ double
 ac_time_julian_day(struct Date *date);
 
 /**
- * \todo Document function.
+ * @brief Convert the date to single weekday.
+ * 
  * @param date A Date struct.
  */
 enum Weekday
@@ -101,4 +102,3 @@ double
 ac_time_decimal_day(struct DayOfMonth *day);
 
 #endif
-
