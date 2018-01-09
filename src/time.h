@@ -84,7 +84,7 @@ double
 ac_time_julian_day(struct Date *date);
 
 /**
- * @brief Convert the date to single weekday.
+ * @brief Computes weekday from given date.
  * 
  * @param date A Date struct.
  */
