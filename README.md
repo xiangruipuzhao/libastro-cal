@@ -58,6 +58,4 @@ Go to *tests/* directory, and follow the instructions in README.md to build and 
 * faraco <skelic3@gmail.com>
         
 ## License
-This project is licensed under the GPL3 License - see the LICENSE file for details.
-
-    
+This project is licensed under the GPL3 License and the original algorithms implementation was derived from astro-rust project under MIT license - see the LICENSE file for more details. 
