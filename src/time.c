@@ -110,3 +110,32 @@ ac_time_decimal_day(struct DayOfMonth *day)
           + day->sec / 60.0
           - day->time_zone / 24.0;
 }
+
+int
+ac_time_is_leap_year(int16_t year, enum CalType *cal_type)
+{
+    return 1;
+}
+
+/*double
+ac_time_decimal_year(struct Date *date)
+{
+    int y = 0;
+    double days = 365.0;
+    uint8_t month = date->month;
+    
+    if (month > 1)
+    {
+        y += 31;
+    }
+    
+    if (month > 2)
+    {
+        y += 28;
+    }
+    
+    return days;
+}
+*/
+
+

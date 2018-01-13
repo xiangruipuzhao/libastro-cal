@@ -101,4 +101,22 @@ ac_time_weekday_frm_date(struct Date *date);
 double
 ac_time_decimal_day(struct DayOfMonth *day);
 
+/**
+ * @brief Checks if a year is a leap year (return 1 for true and 0 for false)
+ *
+ * @param year Year.
+ * @param cal_type CalType enum.
+ */
+int
+ac_time_is_leap_year(int16_t year, enum CalType *cal_type);
+
+/**
+ * 
+ * @brief Computes decimal year for a Date.
+ * @param date A Date struct.
+ * 
+ */
+double
+ac_time_decimal_year(struct Date *date);
+
 #endif

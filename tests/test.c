@@ -83,6 +83,10 @@ MU_TEST(test_check)
     date2.month = m2;
 
     mu_check(ac_time_weekday_frm_date(&date2) == weekday2);
+    
+    enum CalType c2 = Gregorian;
+    mu_check(ac_time_is_leap_year(2004, &c2) == -1);
+    
 }
 
 MU_TEST_SUITE(test_suite)
@@ -95,6 +99,9 @@ main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
+    
+    enum CalType c2 = Gregorian;
+    printf("%d\n", ac_time_is_leap_year(2004, &c2));
     
     return 0;
 }
