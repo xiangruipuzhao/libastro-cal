@@ -10,6 +10,8 @@ var searchData=
   ['ac_5fasteroid_5faprnt_5fdiameter',['ac_asteroid_aprnt_diameter',['../asteroid_8c.html#a93b9590772a67430a7760cd8bf58266a',1,'ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist):&#160;asteroid.c'],['../asteroid_8h.html#a93b9590772a67430a7760cd8bf58266a',1,'ac_asteroid_aprnt_diameter(double true_diameter, double asteroid_earth_dist):&#160;asteroid.c']]],
   ['ac_5fasteroid_5fdiameter',['ac_asteroid_diameter',['../asteroid_8c.html#a51084b9742768382ac23a811b9573eaf',1,'ac_asteroid_diameter(double abs_mag, double albedo):&#160;asteroid.c'],['../asteroid_8h.html#a51084b9742768382ac23a811b9573eaf',1,'ac_asteroid_diameter(double abs_mag, double albedo):&#160;asteroid.c']]],
   ['ac_5ftime_5fdecimal_5fday',['ac_time_decimal_day',['../time_8h.html#ab3d261d64d0a87a857e0845a9440faae',1,'time.c']]],
+  ['ac_5ftime_5fdecimal_5fyear',['ac_time_decimal_year',['../time_8h.html#ab7e2bc23c9ff907a43749531ceba0134',1,'time.h']]],
+  ['ac_5ftime_5fis_5fleap_5fyear',['ac_time_is_leap_year',['../time_8h.html#a977648f96e3e14cbf2d36759e3bc3e5c',1,'time.c']]],
   ['ac_5ftime_5fjulian_5fday',['ac_time_julian_day',['../time_8h.html#a03026acbd380a6f8140da33802f85406',1,'time.c']]],
   ['ac_5ftime_5fweekday_5ffrm_5fdate',['ac_time_weekday_frm_date',['../time_8h.html#a165865012b4fd27f11224cbf5d30326d',1,'time.c']]]
 ];

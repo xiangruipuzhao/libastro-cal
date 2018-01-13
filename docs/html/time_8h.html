@@ -160,11 +160,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:a03026acbd380a6f8140da33802f85406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes Julian day from a <a class="el" href="structDate.html">Date</a>.  <a href="#a03026acbd380a6f8140da33802f85406">More...</a><br /></td></tr>
 <tr class="separator:a03026acbd380a6f8140da33802f85406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165865012b4fd27f11224cbf5d30326d"><td class="memItemLeft" align="right" valign="top">enum Weekday&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a165865012b4fd27f11224cbf5d30326d">ac_time_weekday_frm_date</a> (struct <a class="el" href="structDate.html">Date</a> *date)</td></tr>
-<tr class="memdesc:a165865012b4fd27f11224cbf5d30326d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the date to single weekday.  <a href="#a165865012b4fd27f11224cbf5d30326d">More...</a><br /></td></tr>
+<tr class="memdesc:a165865012b4fd27f11224cbf5d30326d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes weekday from given date.  <a href="#a165865012b4fd27f11224cbf5d30326d">More...</a><br /></td></tr>
 <tr class="separator:a165865012b4fd27f11224cbf5d30326d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d261d64d0a87a857e0845a9440faae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#ab3d261d64d0a87a857e0845a9440faae">ac_time_decimal_day</a> (struct <a class="el" href="structDayOfMonth.html">DayOfMonth</a> *day)</td></tr>
 <tr class="memdesc:ab3d261d64d0a87a857e0845a9440faae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes decimal day for a <a class="el" href="structDayOfMonth.html">DayOfMonth</a>.  <a href="#ab3d261d64d0a87a857e0845a9440faae">More...</a><br /></td></tr>
 <tr class="separator:ab3d261d64d0a87a857e0845a9440faae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977648f96e3e14cbf2d36759e3bc3e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a977648f96e3e14cbf2d36759e3bc3e5c">ac_time_is_leap_year</a> (int16_t year, enum CalType *cal_type)</td></tr>
+<tr class="memdesc:a977648f96e3e14cbf2d36759e3bc3e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a year is a leap year (return 1 for true and 0 for false)  <a href="#a977648f96e3e14cbf2d36759e3bc3e5c">More...</a><br /></td></tr>
+<tr class="separator:a977648f96e3e14cbf2d36759e3bc3e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e2bc23c9ff907a43749531ceba0134"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#ab7e2bc23c9ff907a43749531ceba0134">ac_time_decimal_year</a> (struct <a class="el" href="structDate.html">Date</a> *date)</td></tr>
+<tr class="memdesc:ab7e2bc23c9ff907a43749531ceba0134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes decimal year for a <a class="el" href="structDate.html">Date</a>.  <a href="#ab7e2bc23c9ff907a43749531ceba0134">More...</a><br /></td></tr>
+<tr class="separator:ab7e2bc23c9ff907a43749531ceba0134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for time operations. </p>
@@ -188,6 +194,65 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">day</td><td>A <a class="el" href="structDayOfMonth.html">DayOfMonth</a> struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab7e2bc23c9ff907a43749531ceba0134"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ac_time_decimal_year </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structDate.html">Date</a> *&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes decimal year for a <a class="el" href="structDate.html">Date</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>A <a class="el" href="structDate.html">Date</a> struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a977648f96e3e14cbf2d36759e3bc3e5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ac_time_is_leap_year </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum CalType *&#160;</td>
+          <td class="paramname"><em>cal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a year is a leap year (return 1 for true and 0 for false) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>Year. </td></tr>
+    <tr><td class="paramname">cal_type</td><td>CalType enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -232,7 +297,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convert the date to single weekday. </p>
+<p>Computes weekday from given date. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">date</td><td>A <a class="el" href="structDate.html">Date</a> struct. </td></tr>

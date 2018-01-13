@@ -114,7 +114,26 @@ ac_time_decimal_day(struct DayOfMonth *day)
 int
 ac_time_is_leap_year(int16_t year, enum CalType *cal_type)
 {
-    return 1;
+    enum CalType julian_c = Julian;
+    enum CalType gregorian_c = Gregorian;
+    
+    if (julian_c)
+    {
+        return year % 4 == 0;
+    }
+    
+    else if (gregorian_c)
+    {
+        if ((year % 100) == 0)
+        {
+            return year % 400 == 0;
+        }
+        
+        else
+        {
+            return year % 4 == 0;
+        }
+    }
 }
 
 /*double
@@ -137,5 +156,3 @@ ac_time_decimal_year(struct Date *date)
     return days;
 }
 */
-
-
