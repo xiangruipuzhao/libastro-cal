@@ -67,7 +67,7 @@ ac_time_weekday_frm_date(struct Date *date)
 {
     struct Date date_0UT;
     enum CalType cal_type_1 = Gregorian;
-    
+
     date_0UT = (struct Date)
     {
         .year = date->year,
@@ -75,10 +75,10 @@ ac_time_weekday_frm_date(struct Date *date)
         .month = date->month,
         .cal_type = cal_type_1
     };
-    
+
     double JD = ac_time_julian_day(&date_0UT);
     int64_t wd = (int64_t)(JD + 1.5) % 7;
-    
+
     enum Weekday wday;
     switch(wd)
     {
@@ -116,19 +116,19 @@ ac_time_is_leap_year(int16_t year, enum CalType *cal_type)
 {
     enum CalType julian_c = Julian;
     enum CalType gregorian_c = Gregorian;
-    
+
     if (julian_c)
     {
         return year % 4 == 0;
     }
-    
+
     else if (gregorian_c)
     {
         if ((year % 100) == 0)
         {
             return year % 400 == 0;
         }
-        
+
         else
         {
             return year % 4 == 0;
@@ -136,23 +136,37 @@ ac_time_is_leap_year(int16_t year, enum CalType *cal_type)
     }
 }
 
-/*double
+double
 ac_time_decimal_year(struct Date *date)
 {
     int y = 0;
     double days = 365.0;
-    uint8_t month = date->month;
-    
+    uint8_t month = (uint8_t)date->month;
+
     if (month > 1)
     {
         y += 31;
     }
-    
+
     if (month > 2)
     {
         y += 28;
+        if (ac_time_is_leap_year(date->year, &date->cal_type))
+        {
+            y += 1;
+            days += 1.0;
+        }
     }
-    
-    return days;
+
+    if (month >  3) { y += 31; }
+    if (month >  4) { y += 30; }
+    if (month >  5) { y += 31; }
+    if (month >  6) { y += 30; }
+    if (month >  7) { y += 31; }
+    if (month >  8) { y += 31; }
+    if (month >  9) { y += 30; }
+    if (month > 10) { y += 31; }
+    if (month > 11) { y += 30; }
+
+    return ((double)date->year) + ((double)y + date->decimal_day)/days;
 }
-*/

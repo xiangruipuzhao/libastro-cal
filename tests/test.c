@@ -73,7 +73,7 @@ MU_TEST(test_check)
     dom1.time_zone = 11.2;
 
     mu_check(ac_time_decimal_day(&dom1) >= 7.000);
- 
+
     struct Date date2;
     enum Month m2 = May;
     enum Weekday weekday2 = Saturday;
@@ -83,10 +83,23 @@ MU_TEST(test_check)
     date2.month = m2;
 
     mu_check(ac_time_weekday_frm_date(&date2) == weekday2);
-    
+
     enum CalType c2 = Gregorian;
     mu_check(ac_time_is_leap_year(2004, &c2) == 1);
-    
+
+    struct Date date3;
+    enum Month m3 = October;
+    enum CalType c3 = Julian;
+
+    date3 = (struct Date)
+    {
+        .year = 2,
+        .decimal_day = 16.9,
+        .month = m3,
+        .cal_type = c3
+    };
+
+    mu_check(ac_time_decimal_year(&date3) >= 2.0);
 }
 
 MU_TEST_SUITE(test_suite)
@@ -99,6 +112,10 @@ main(int argc, char **argv)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
+
+    struct Date date3;
+    enum Month m3 = October;
+    enum CalType c3 = Julian;
 
     return 0;
 }
