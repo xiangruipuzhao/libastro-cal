@@ -108,7 +108,7 @@ MU_TEST_SUITE(test_suite)
 }
 
 int
-main(int argc, char **argv)
+main(void)
 {
     MU_RUN_SUITE(test_suite);
     MU_REPORT();
