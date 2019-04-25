@@ -3,10 +3,6 @@
 
 A simple astronomical algorithm library based on astro-rust project in C.
 
-# Online documentation
-
-https://faraco.github.io/libastro-cal/html/index.html
-
 ## Getting Started
 
 ### Prerequisites
@@ -54,8 +50,8 @@ and then you can test it by compiling an asteroid_diameter program in *examples/
 
 Go to *tests/* directory, and follow the instructions in README.md to build and run the tests.
 
-## Authors
-* faraco <skelic3@gmail.com>
-        
+## Original Author
+Momozor
+
 ## License
-This project is licensed under the GPL3 License and the original algorithms implementation was derived from astro-rust project under MIT license - see the LICENSE file for more details. 
+This project is licensed under the GPL-3.0 License and the original algorithms implementation was derived from astro-rust project under MIT license - see the LICENSE file for more details. 
