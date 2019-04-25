@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/faraco/libastro-cal.svg?branch=master)](https://travis-ci.org/faraco/libastro-cal)
 # libastro-cal
 
 A simple astronomical algorithm library based on astro-rust project in C.
